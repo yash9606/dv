@@ -1,0 +1,3 @@
+AverageRevenuePerState = AVERAGEX( VALUES(SalesTable[State]), CALCULATE(SUM(SalesTable[Revenue])) )
+
+ProfitabilityStatus = IF(SalesTable[AverageRevenuePerState] > 1000, "Profitable", "Non-Profitable" )
