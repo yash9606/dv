@@ -1,0 +1,6 @@
+Employee Count = COUNT('HR'[EmployeeNumber]) 
+Attrition Count = COUNTROWS(FILTER('HR', 'HR'[Attrition]="Yes")) 
+Attrition Rate = DIVIDE([Attrition Count], [Employee Count], 0) * 100
+Active Employees = [Employee Count] - [Attrition Count]
+Average Age = AVERAGE(HR[Age])
+count showid = count(amazon_prime_titles[release_year]) 
